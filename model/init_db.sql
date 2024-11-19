@@ -5,12 +5,13 @@ SET foreign_key_checks = 0;
 DROP TABLE IF EXISTS sport;
 DROP TABLE IF EXISTS team; 
 DROP TABLE IF EXISTS venue;
-DROP TABLE IF EXISTS matchtime;
+DROP TABLE IF EXISTS event;
 SET foreign_key_checks = 1;
 
 --
 -- Create Tables
 --
+
 CREATE TABLE sport(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL UNIQUE
@@ -29,8 +30,8 @@ CREATE TABLE venue(
     location VARCHAR(255) NOT NULL
 ); 
 
-CREATE TABLE match(
-    id INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE event(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     date date NOT NULL,
     day_of_week VARCHAR (20) NOT NULL,
     time time NOT NULL,
