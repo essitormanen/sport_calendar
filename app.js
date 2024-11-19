@@ -8,6 +8,7 @@ const cors = require('cors');
 const eventRouter = require('./routes/event');
 const teamRouter = require('./routes/team');
 const sportRouter = require('./routes/sport');
+const venueRouter = require('./routes/venue');
 const indexRouter = require('./routes/index');
 
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use('/api/event', eventRouter);
 app.use('/api/team', teamRouter);
 app.use('/api/sport', sportRouter);
+app.use('/api/venue', venueRouter);
 app.use('/api', indexRouter);
 
 
