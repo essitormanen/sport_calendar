@@ -8,7 +8,9 @@ router.get("/", function(req, res, next) {
         .then(results => {
             res.send(results.data);
         })
-        .catch(err => res.status(500).send(err));
+        .catch(err => res
+                       .status(500)
+                       .send(err));
 });
 
 //POST a new team
@@ -20,10 +22,14 @@ router.post("/", async (req, res) => {
         await db(sql);
         //return the updated list of team
         const result = await db("SELECT * FROM team");
-        res.status(201).send(result.data)
+        res
+         .status(201)
+         .send(result.data)
     }
     catch(e){
-        res.status(500).send({error: e.message})
+        res
+         .status(500)
+         .send({error: e.message})
     }
   });
 
