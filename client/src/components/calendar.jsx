@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
+import '../stylingSheets/calendar.css'
 
 
 export default function Calendar(){
@@ -32,13 +33,32 @@ export default function Calendar(){
       return (
         <div className = 'Calendar'> 
             <table>
+              <thead> 
+                <tr> 
+                  <th className='th-date'> Date </th>
+                  <th className='th-time'> Time </th>
+                  <th className='th-sport'> Sport </th>
+                  <th className='th-venue'> Venue </th>
+                  <th className='th-teamA'> Team </th>
+                  <th className='th-vs'> VS </th>
+                  <th className='th-teamB'> Team </th>
+                </tr>
+              </thead>
+              <tbody> 
                 {
-                events.map((event) =>(
+                  events.map((event) =>(
                     <tr key={event.id}>
-                       {event._sportname} ({event.id}) {event._venuename} {event._teamname_A} {event._teamname_B}
+                       <td> {event.date} </td>
+                       <td> {event.time} </td>
+                       <td> {event._sportname} </td>
+                       <td> {event._venuename} </td>
+                       <td> {event._teamname_A} </td>
+                       <td> vs. </td>
+                       <td> {event._teamname_B} </td>
                     </tr>
                 ))
-                }
+              }
+              </tbody>
             </table>
         </div>
     )

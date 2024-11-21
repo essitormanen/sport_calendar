@@ -1,13 +1,45 @@
-.Calendar{
-    /* display: grid; */
-    border: 1px solid;
-    border-color: wheat;
-    color: red;
-    background-color: aqua;
-}
 
-.table {
+table, th, td {
     border: 1px solid;
-    border-color: aliceblue;
-}
+    border-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+  }
 
+
+  .th-date{
+    background-color: Linen;
+    color: black;
+  }
+
+  .th-time{
+    background-color: MintCream;
+    color: black;
+  }
+
+  .th-sport{
+    background-color: MistyRose;
+    color: black;
+  }
+
+  .th-venue{
+    background-color: powderblue;
+    color: black;
+  }
+
+  .th-teamA{
+    background-color: PaleGoldenRod;
+    color: black;
+  }
+
+  .th-vs{
+    background-color: OldLace;
+    color: black;
+  }
+
+  .th-teamB{
+    background-color: papayawhip;
+    color: black;
+  }
