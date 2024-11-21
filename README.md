@@ -1,5 +1,7 @@
 Welcome to my project "Sport Calendar"!
 
+BACK-END
+Port 5000
 
 in routes, event/_sportname doesn't work 
 
@@ -14,4 +16,7 @@ you can post a new event with a body:
   "_teamname_A": "Huuhkajat", //VARCHAR
   "_teamname_B": "Kurenpojat" //VARCHAR 
 }
+
+FRONT END 
+Port: 5173
 

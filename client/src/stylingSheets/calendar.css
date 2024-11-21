@@ -1,0 +1,13 @@
+.Calendar{
+    /* display: grid; */
+    border: 1px solid;
+    border-color: wheat;
+    color: red;
+    background-color: aqua;
+}
+
+.table {
+    border: 1px solid;
+    border-color: aliceblue;
+}
+
