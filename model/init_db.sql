@@ -32,7 +32,7 @@ CREATE TABLE venue(
 
 CREATE TABLE event(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    date date NOT NULL,
+    date VARCHAR(20) NOT NULL,
     -- dayname VARCHAR (20) NOT NULL,
     time time NOT NULL,
     _sportname VARCHAR(50) NOT NULL,

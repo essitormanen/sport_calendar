@@ -17,6 +17,13 @@ you can post a new event with a body:
   "_teamname_B": "Kurenpojat" //VARCHAR 
 }
 
+Because of the nature of the foreign keys, name of the sport, venue & both teams need to be posted to the database in order for them to be accepted as values when adding a new event. this is making it a bit complicated at this point in the UI 
+
 FRONT END 
 Port: 5173
 
+AddEvent
+
+sport options aren't dynamically in sync with the sports listed in database, they are hardcoded in the form
+
+First add sport (backend), then teams (backend) then you can add events (backend or frontend)
