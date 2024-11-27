@@ -19,21 +19,20 @@ CREATE TABLE sport(
 
 CREATE TABLE team(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL UNIQUE,
-    _sportname VARCHAR(50) NOT NULL,
-    FOREIGN KEY (_sportname) REFERENCES sport(name) ON DELETE cascade
+    name VARCHAR(100) NOT NULL UNIQUE
+    -- _sportname VARCHAR(50) NOT NULL,
+    -- FOREIGN KEY (_sportname) REFERENCES sport(name) ON DELETE cascade
 );  
 
 CREATE TABLE venue(
     id INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL UNIQUE,
-    location VARCHAR(255) NOT NULL
+    name VARCHAR(255) NOT NULL UNIQUE
+    -- location VARCHAR(255) NOT NULL {/*doesn't apply in any parts of the code so it isn't needed*/}
 ); 
 
 CREATE TABLE event(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     date VARCHAR(20) NOT NULL,
-    -- dayname VARCHAR (20) NOT NULL,
     time time NOT NULL,
     _sportname VARCHAR(50) NOT NULL,
     _venuename VARCHAR(255) NOT NULL,
@@ -51,17 +50,22 @@ VALUES ("Football"),
        ("Basketball"),
        ("Ice Hockey");
 
-INSERT INTO team (name, _sportname)
-VALUES ("Liverpool", "Football"),
-       ("Arsenal", "Football"),
-       ("Knicks", "Basketball"),
-       ("Sharks", "Basketball"),
-       ("Pittsburgh Penguins", "Ice Hockey"),
-       ("Anaheim Ducks", "Ice Hockey");
+INSERT INTO team (name)
+VALUES ("Liverpool"),
+       ("Arsenal"),
+       ("Knicks"),
+       ("Sharks"),
+       ("Pittsburgh Penguins"),
+       ("Anaheim Ducks");
 
-INSERT INTO venue (name, location)
-VALUES ("Wembley Stadium","London"),
-       ("London Stadium", "London"),
-       ("Madison Square Garden", "New York"),
-       ("United Center", "Chicago"),
-       ("Matthews Arena", "Boston");
+INSERT INTO venue (name)
+VALUES ("Wembley Stadium"),
+       ("London Stadium"),
+       ("Madison Square Garden"),
+       ("United Center"),
+       ("Matthews Arena");
+
+INSERT INTO event (date, time, _sportname, _venuename, _teamname_A, _teamname_B)
+VALUES ("2024-11-11", "11:00:00", "Football", "Wembley Stadium", "Liverpool", "Arsenal"),
+       ("2024-11-15", "19:00:00", "Basketball", "Madison Square Garden", "Knicks", "Sharks"),
+       ("2024-11-23", "18:00:00", "Ice Hockey", "Matthews Arena", "Pittsburgh Penguins", "Anaheim Ducks");

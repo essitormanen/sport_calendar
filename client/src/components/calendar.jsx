@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import '../stylingSheets/calendar.css'
 
-
+//the function Calendar makes a fetch request to the database and displays the fetched data in the form of a timetable
 export default function Calendar(){
     let[events, setEvents] = useState([]);
     

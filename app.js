@@ -21,6 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
+
+//these are the routers for each table
 app.use('/api/event', eventRouter);
 app.use('/api/team', teamRouter);
 app.use('/api/sport', sportRouter);

@@ -10,10 +10,9 @@ function App() {
 
   return (
     <>  
-      <h1> Event Calendar </h1>
+      <h1> Sport Calendar </h1>
       <Navbar> </Navbar>
       <Routes>
-           {/* <Route path="/" element={<Welcome/>}/> */}
            <Route path='/' element={<Calendar/>}/> 
            <Route path ='/addEvent' element={<AddEvent/>}/> 
         

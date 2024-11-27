@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+
+//the following piece of code is a function called AddEvent. It is a form for adding a new event to the database
 export default function AddEvent(){
     let EMPTY_FORM = {
         date: '',
@@ -29,9 +31,8 @@ export default function AddEvent(){
 
         setFormData(EMPTY_FORM)
         
-        // if(results.ok){
-        //     alert('Event submitted succesfully!')
-        // } 
+        
+        alert("Form submitted! Refer to the console to see if it was succesful + Reload page to see the changes")
             
         
 }   
@@ -73,14 +74,14 @@ export default function AddEvent(){
                 
                 <div>
                     <label className='sportInput'> Sport:  
-                        <input htmlFor='venue'  
+                        <input htmlFor='sport'  
                             id='sport' 
                             type='text'
                             name='_sportname'
                             value={formData._sportname}
                             onChange={handleChange}
                             required minLength='1'
-                            maxLength='20'
+                            maxLength='50'
                             size='15'
                         />            
                     </label>
@@ -95,7 +96,7 @@ export default function AddEvent(){
                             value={formData._venuename}
                             onChange={handleChange}
                             required minLength='1'
-                            maxLength='20'
+                            maxLength='50'
                             size='15'
                         />
                     </label>
