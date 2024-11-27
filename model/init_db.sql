@@ -46,4 +46,22 @@ CREATE TABLE event(
 );
 
 
-   
+INSERT INTO sport (name)
+VALUES ("Football"),
+       ("Basketball"),
+       ("Ice Hockey");
+
+INSERT INTO team (name, _sportname)
+VALUES ("Liverpool", "Football"),
+       ("Arsenal", "Football"),
+       ("Knicks", "Basketball"),
+       ("Sharks", "Basketball"),
+       ("Pittsburgh Penguins", "Ice Hockey"),
+       ("Anaheim Ducks", "Ice Hockey");
+
+INSERT INTO venue (name, location)
+VALUES ("Wembley Stadium","London"),
+       ("London Stadium", "London"),
+       ("Madison Square Garden", "New York"),
+       ("United Center", "Chicago"),
+       ("Matthews Arena", "Boston");
