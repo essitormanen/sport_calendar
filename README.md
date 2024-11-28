@@ -27,13 +27,14 @@ In the MySQL CLI, type `create database sports_calendar;` to create a database i
 
 Run `npm run migrate` in your terminal, in the project folder
 
-### Run Your Development Servers
+#### Run Your Development Servers
 
 1. Run `npm start` in project directory to start the Express server on port 5000
 2. Run `cd client` and run `npm run dev` to start client server in development mode, port will be 5173
 3. Test client app in `http://localhost:5173`
 
-   ## Project Description
+
+##### Project Description
 
 - This project is a 'Sport Event Calendar', where you can add events to a database and display it in the client. 
 
@@ -72,15 +73,15 @@ To add data to the database, you can refer to correct body frames under:
   "_teamname_B": "" //VARCHAR 
 }
 
-Note!
-  - you can fetch events by id 
-  - in routes, event/_sportname doesn't work   
 
 - In the client, the App.jsx file fetches the events from the database 
 
 Because of the nature of the foreign keys, the tables `sport`, `venue` & both teams need to be posted to the database beforehand in order for them to be accepted as values when adding a new event. 
 
-Note! In the client side there are not any indications of which sports/teams/venues exist in the database. You can check the default values in the init_db.sql file.
 
-- There is also a component called AddEvent.jsx, which contains a form to create/add new events to the database. It takes the values (date, time, sport, venue, team A & team B) // Note, you can add for example a Football event with Basketballl teams/venues, as they aren't properly separated in the code. Submitting a form with suitable information, the event will be added to the database and will show on the calendar after refreshing the page. Submitting an empty form or a form with falsey values, you can find an error in the console. 
+- There is a component called AddEvent.jsx, which contains a form to create/add new events to the database. It takes the values (date, time, sport, venue, team A & team B) // Note, you can add for example a Football event with Basketballl teams/venues, as they aren't properly separated in the code. 
 
+
+- Submitting a form with suitable information, the event will be added to the database and will show on the calendar after refreshing the page. Submitting an empty form or a form with falsey values, you can find an error in the console. I was planning on making an conditionally rendering alert box which would indicate whether the form was submitted succesfully, but I ended up not having enough time for that.
+
+- When filling the form to add an event, the input boxes `sport`, `venue` and `team` (A+B) have to be written manually. You can check the possible values from the dropdown boxes next to each of them.  

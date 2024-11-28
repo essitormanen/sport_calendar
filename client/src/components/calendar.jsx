@@ -14,12 +14,11 @@ export default function Calendar(){
     async function getEvents() {
       
       try{
-        console.log("calendar events")
+        
         let response = await fetch(`/api/event`);
         if(response.ok){
           let data = await response.json();
           setEvents(data)
-          // console.log(data)
         }
         else{
           console.log(`Server Error: ${response.status} ${response.statusText}`);
