@@ -79,8 +79,7 @@ To add data to the database, you can refer to correct body frames under:
 Because of the nature of the foreign keys, the tables `sport`, `venue` & both teams need to be posted to the database beforehand in order for them to be accepted as values when adding a new event. 
 
 
-- There is a component called AddEvent.jsx, which contains a form to create/add new events to the database. It takes the values (date, time, sport, venue, team A & team B) // Note, you can add for example a Football event with Basketballl teams/venues, as they aren't properly separated in the code. 
-
+- There is a component called AddEvent.jsx, which contains a form to create/add new events to the database. It takes the values (date, time, sport, venue, team A & team B) // Note, you can add for example a Football event with Basketballl teams/venues, as they aren't properly separated.
 
 - Submitting a form with suitable information, the event will be added to the database and will show on the calendar after refreshing the page. Submitting an empty form or a form with falsey values, you can find an error in the console. I was planning on making an conditionally rendering alert box which would indicate whether the form was submitted succesfully, but I ended up not having enough time for that.
 
